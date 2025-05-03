@@ -1,0 +1,65 @@
+/* Faculty-specific styles */
+.mentee-list, .approval-list {
+    margin-top: 1rem;
+}
+
+.mentee-item, .approval-item {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mentee-item:last-child, .approval-item:last-child {
+    border-bottom: none;
+}
+
+.mentee-info {
+    flex: 1;
+}
+
+.approval-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-success {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.chart-placeholder {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.performance-chart {
+    margin-top: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mentee-item, .approval-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .mentee-item button, .approval-actions {
+        margin-top: 0.5rem;
+    }
+    
+    .chart-placeholder {
+        height: 200px;
+    }
+} 

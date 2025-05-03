@@ -1,0 +1,280 @@
+/* Main Layout */
+.management-dashboard {
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem 0;
+}
+
+.management-dashboard h1 {
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.management-dashboard h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  border-radius: 2px;
+}
+
+.alert-info {
+  background-color: rgba(52, 152, 219, 0.1);
+  border-left: 4px solid #3498db;
+  color: #2c3e50;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card-body {
+  padding: 1.8rem;
+}
+
+.card-title {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.card-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: #3498db;
+  border-radius: 2px;
+}
+
+/* Stats List */
+.stats-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-item {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.2rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.stat-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.stat-item h6 {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+
+.stat-value {
+  color: #2c3e50;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Performance Chart */
+.performance-chart {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-placeholder {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+  border: 1px dashed #cbd5e0;
+}
+
+/* Resource List */
+.resource-list, .goals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.resource-item, .goal-item {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.2rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.resource-item:hover, .goal-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  background-color: #f1f5f9;
+}
+
+.resource-item h6, .goal-item h6 {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.text-muted {
+  color: #7f8c8d !important;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Progress Bars */
+.progress {
+  height: 10px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  border-radius: 5px;
+  transition: width 0.6s ease;
+  position: relative;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: white;
+  text-align: right;
+  padding-right: 5px;
+}
+
+/* Performance Metrics */
+.performance-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.metric-item {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.2rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.metric-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background-color: #f1f5f9;
+}
+
+.metric-item h6 {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.metric-item .progress {
+    height: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.metric-item .progress-bar {
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 5px;
+    transition: width 0.6s ease;
+    position: relative;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: white;
+    text-align: right;
+    padding-right: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .stats-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .management-dashboard {
+    padding: 1.5rem 0;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .stats-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .performance-chart {
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .management-dashboard h1 {
+    font-size: 1.8rem;
+  }
+  
+  .stats-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-value {
+    font-size: 1.8rem;
+  }
+} 

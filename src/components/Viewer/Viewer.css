@@ -1,0 +1,151 @@
+/* Viewer-specific styles */
+.card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Stats Card */
+.stats-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+}
+
+.stat-item h4 {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    color: #6c757d;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Skills Section */
+.skills-section {
+    margin-top: 1rem;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Badges */
+.badge {
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+}
+
+.badge.bg-light {
+    background-color: #f1f3f5 !important;
+    color: #2c3e50;
+}
+
+.category-badge {
+    transition: all 0.2s ease;
+}
+
+.category-badge:hover {
+    transform: scale(1.05);
+}
+
+/* Updates List */
+.updates-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.update-item {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.update-item:last-child {
+    border-bottom: none;
+}
+
+/* Search and Filter */
+.input-group {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.form-control, .form-select {
+    border: 1px solid #ced4da;
+    padding: 0.75rem 1rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Categories List */
+.categories-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    .skills-tags {
+        gap: 0.25rem;
+    }
+
+    .badge {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+
+    .stat-item {
+        padding: 0.5rem;
+    }
+
+    .stat-item h4 {
+        font-size: 1.2rem;
+    }
+
+    .stat-item p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Custom Scrollbar for Updates List */
+.updates-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.updates-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.updates-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.updates-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+} 

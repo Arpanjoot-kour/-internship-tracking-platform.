@@ -1,0 +1,319 @@
+/* Reset and base styles */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --info-color: #0dcaf0;
+    --background-color: #f8f9fa;
+    --border-color: #e9ecef;
+    --text-primary: #2c3e50;
+    --text-secondary: #6c757d;
+    --card-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    --card-hover-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* Student-specific styles */
+.application-list, .internship-list {
+    margin-top: 1rem;
+}
+
+.application-item, .internship-item {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.application-item:last-child, .internship-item:last-child {
+    border-bottom: none;
+}
+
+.badge {
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+}
+
+.badge.bg-secondary {
+    background-color: #f1f3f5 !important;
+    color: var(--text-primary);
+}
+
+.progress {
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--border-color);
+}
+
+.progress-bar {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.milestones {
+    margin-top: 24px;
+}
+
+.milestone-item {
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.milestone-item.completed {
+    background-color: #e8f5e9;
+    border-color: #c8e6c9;
+    color: #2e7d32;
+}
+
+.milestone-item.active {
+    background-color: #e3f2fd;
+    border-color: #bbdefb;
+    color: #1976d2;
+    font-weight: 500;
+}
+
+.milestone-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+.alert {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .application-item, .internship-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .application-item button, .internship-item button {
+        margin-top: 0.5rem;
+    }
+    
+    .milestone-item {
+        font-size: 0.9rem;
+    }
+}
+
+/* Filter Section Styles */
+.filter-section {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: var(--card-shadow);
+}
+
+.filter-section .form-select {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.filter-section .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+/* Internship List Grid */
+.internship-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 24px;
+    padding: 10px;
+}
+
+/* Internship Card Styles */
+.internship-item {
+    background: white;
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.internship-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.internship-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.internship-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    padding-right: 80px;
+}
+
+.company-name {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.internship-details {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.internship-info {
+    margin-bottom: 20px;
+}
+
+.internship-info p {
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+/* Skills Section */
+.skills-container {
+    margin-top: 15px;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.badge.location-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 0.85rem;
+    padding: 6px 12px;
+}
+
+/* Action Button */
+.internship-actions {
+    padding: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.btn-apply {
+    width: 100%;
+    padding: 12px 24px;
+    font-weight: 500;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-apply:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .internship-list {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 10px;
+    }
+
+    .filter-section {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .filter-section .form-select {
+        margin-bottom: 10px;
+    }
+}
+
+/* Domain Selection Styles */
+.domain-selection {
+    padding: 10px 0;
+}
+
+.domain-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.domain-card:hover {
+    transform: translateX(5px);
+    background: var(--background-color);
+    border-color: var(--primary-color);
+}
+
+.domain-card.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.domain-card.active p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.domain-icon {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-color);
+    border-radius: 10px;
+}
+
+.domain-info {
+    flex: 1;
+}
+
+.domain-info h6 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.domain-info p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+} 

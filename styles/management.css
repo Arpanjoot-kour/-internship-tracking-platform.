@@ -1,0 +1,61 @@
+/* Management-specific styles */
+.stats-list, .resource-list, .goals-list {
+    margin-top: 1rem;
+}
+
+.stat-item, .resource-item, .goal-item {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.stat-item:last-child, .resource-item:last-child, .goal-item:last-child {
+    border-bottom: none;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #0d6efd;
+    margin: 0.5rem 0;
+}
+
+.progress {
+    height: 1rem;
+    border-radius: 5px;
+    background-color: #e9ecef;
+    margin-top: 0.5rem;
+}
+
+.progress-bar {
+    background-color: #0d6efd;
+    border-radius: 5px;
+}
+
+.chart-placeholder {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.performance-chart {
+    margin-top: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .stat-value {
+        font-size: 1.5rem;
+    }
+    
+    .chart-placeholder {
+        height: 200px;
+    }
+    
+    .progress {
+        height: 0.75rem;
+    }
+} 
